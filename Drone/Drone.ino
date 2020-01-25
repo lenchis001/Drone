@@ -5,37 +5,41 @@
 #include "EngineService.h"
 
 #ifdef DEBUG
-shared_ptr<LogService> logService;
+LogService* logService;
 #endif
-shared_ptr<GyroscopeService> gyroscopeService;
-shared_ptr<LevelService> levelService;
-shared_ptr<EngineService> engineService;
+GyroscopeService* gyroscopeService;
+LevelService* levelService;
+EngineService* engineService;
 
 void setup()
 {
 #ifdef DEBUG
-    logService = shared_ptr<LogService>(new LogService());
+        logService = new LogService();
 #endif
-    gyroscopeService = shared_ptr<GyroscopeService>(new GyroscopeService());
-    engineService = shared_ptr<EngineService>(new EngineService(
-        MAX_SPEED,
-        STABLE_SPEED
+        gyroscopeService = new GyroscopeService();
+        engineService = new EngineService(
+            MAX_SPEED,
+            STABLE_SPEED
 #ifdef DEBUG
-        ,
-        logService
+            ,
+            logService
 #endif
-        ));
-    levelService = shared_ptr<LevelService>(new LevelService(
-        gyroscopeService,
-        engineService
+            );
+        levelService = new LevelService(
+            gyroscopeService,
+            engineService
 #ifdef DEBUG
-        ,
-        logService
+            ,
+            logService
 #endif
-        ));
+            );
+
+        levelService->setPower(500);
+        levelService->setRoll(0);
+        levelService->setPitch(0);
 }
 
 void loop()
 {
-    levelService->refreshState();
+        levelService->refreshState();
 }

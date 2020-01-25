@@ -6,16 +6,16 @@
 class Point
 {
 private:
-    float _x, _y;
+    int _x, _y;
 
 public:
-    Point(float x = 0, float y = 0);
+    Point(int x = 0, int y = 0);
 
-    float getX();
-    float getY();
+    int getX();
+    int getY();
 
-    void setX(float x);
-    void setY(float y);
+    void setX(int x);
+    void setY(int y);
 };
 
 #endif

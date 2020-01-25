@@ -5,7 +5,7 @@ EngineService::EngineService(
     unsigned short stableSpeed
 #ifdef DEBUG
     ,
-    shared_ptr<LogService> logService
+    LogService* logService
 #endif
 )
 {

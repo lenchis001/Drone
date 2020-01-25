@@ -1,6 +1,5 @@
 #include "Setup.h"
 
-#include "shared_ptr.h"
 #include "LogService.h"
 #include "EngineType.h"
 
@@ -10,7 +9,7 @@
 class EngineService
 {
 private:
-    shared_ptr<LogService> _logService;
+    LogService* _logService;
 
 public:
     EngineService(
@@ -18,7 +17,7 @@ public:
         unsigned short stableSpeed
 #ifdef DEBUG
         ,
-        shared_ptr<LogService> logService
+        LogService* logService
 #endif
     );
 

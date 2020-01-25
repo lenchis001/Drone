@@ -1,6 +1,6 @@
 #ifndef ENUM_ENGINE_TYPE
 #define ENUM_ENGINE_TYPE
-enum EngineType
+enum class EngineType
 {
     FRONT_LEFT,
     FRONT_RIGHT,
