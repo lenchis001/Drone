@@ -1,3 +1,6 @@
+#ifndef CLASS_LEVEL_SERVICE
+#define CLASS_LEVEL_SERVICE
+
 #include "Arduino.h"
 
 #include "Setup.h"
@@ -5,9 +8,6 @@
 #include "GyroscopeService.h"
 #include "EngineService.h"
 #include "LogService.h"
-
-#ifndef CLASS_LEVEL_SERVICE
-#define CLASS_LEVEL_SERVICE
 
 class LevelService
 {

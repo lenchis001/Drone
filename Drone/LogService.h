@@ -1,9 +1,8 @@
-#include "Arduino.h"
-
-#include "Setup.h"
-
 #ifndef CLASS_LOG_SERVICE
 #define CLASS_LOG_SERVICE
+
+#include "Arduino.h"
+#include "Setup.h"
 
 #ifdef DEBUG
 class LogService

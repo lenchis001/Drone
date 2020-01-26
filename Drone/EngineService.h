@@ -1,10 +1,10 @@
+#ifndef CLASS_ENGINE_SERVICE
+#define CLASS_ENGINE_SERVICE
+
 #include "Setup.h"
 
 #include "LogService.h"
 #include "EngineType.h"
-
-#ifndef CLASS_ENGINE_SERVICE
-#define CLASS_ENGINE_SERVICE
 
 class EngineService
 {

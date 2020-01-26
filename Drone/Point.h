@@ -1,7 +1,7 @@
-#include "Arduino.h"
-
 #ifndef CLASS_POINT
 #define CLASS_POINT
+
+#include "Arduino.h"
 
 class Point
 {

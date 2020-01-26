@@ -3,13 +3,15 @@
 #include "GyroscopeService.h"
 #include "LogService.h"
 #include "EngineService.h"
+#include "RcService.h"
 
 #ifdef DEBUG
 LogService* logService;
 #endif
-GyroscopeService* gyroscopeService;
-LevelService* levelService;
-EngineService* engineService;
+GyroscopeService *gyroscopeService;
+LevelService *levelService;
+EngineService *engineService;
+RcService *rcService;
 
 void setup()
 {
@@ -24,7 +26,7 @@ void setup()
             ,
             logService
 #endif
-            );
+        );
         levelService = new LevelService(
             gyroscopeService,
             engineService
@@ -32,7 +34,8 @@ void setup()
             ,
             logService
 #endif
-            );
+        );
+        rcService = new RcService(levelService);
 
         levelService->setPower(500);
         levelService->setRoll(0);
