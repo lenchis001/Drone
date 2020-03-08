@@ -19,6 +19,8 @@ void setup()
         logService = new LogService();
 #endif
         gyroscopeService = new GyroscopeService();
+        gyroscopeService->init();
+        
         engineService = new EngineService(
             MAX_SPEED,
             STABLE_SPEED
@@ -44,5 +46,6 @@ void setup()
 
 void loop()
 {
-        levelService->refreshState();
+        gyroscopeService->refreshState();
+        //levelService->refreshState();
 }
